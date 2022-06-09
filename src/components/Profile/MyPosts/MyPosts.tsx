@@ -4,6 +4,12 @@ import {Post} from "./Post/Post";
 
 
 export function MyPosts() {
+
+    let postsData = [
+        {id: 1, message: 'Hi, how are you?', likesCount: 15},
+        {id: 2, message: 'It\'s my first post', likesCount: 23},
+    ]
+
     return (
         <div className={s.postsBlock}>
             <h3>My posts</h3>
@@ -18,8 +24,8 @@ export function MyPosts() {
 
             </div>
             <div className={s.posts}>
-                <Post message="Hi, how are you?" likesCount='15'/>
-                <Post message="It's my first post" likesCount='23'/>
+                <Post message={postsData[0].message} likesCount={postsData[0].likesCount}/>
+                <Post message={postsData[1].message} likesCount={postsData[1].likesCount}/>
             </div>
         </div>
     );
